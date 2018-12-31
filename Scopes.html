@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Scopes in Javascript</title>
+</head>
+<body>
+<h1>Scopes</h1>
+<h2>Variables declared within a JavaScript function, become local to the function</h2>
+</body>
+
+<script>
+//A Javascript example of scopes
+	//var hisName = "John Lee";
+	//outside of the scope so it is global
+	var printHisName = function() {
+		var hisName = "John Lee";
+		document.write(hisName);
+	}
+
+	var printHerName = function() {
+		var herName = "Jenny Jones";
+		document.write(herName);
+		//document.write(hisName);
+		//can't be used outside its function
+	}
+
+	printHisName();
+	printHerName();
+
+</script>
+
+</html>
